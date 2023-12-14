@@ -122,11 +122,11 @@ ___________              ________           .____    .__          __
 	}
 
 	if (alege != 4) {
-		std::cout << "Ati ales o optiune invalida. Va rugam sa alegeti dintre urmatoarele actiuni:" << std::endl;
+		std::cout << "You've chosen an invalid option. Please choose from the following options:" << std::endl;
 		alege = 1;
 		while (alege == 1 || alege == 2 || alege == 3) {
-			std::cout << std::endl << "Actiuni \n";
-			std::cout << "1 - Afiseaza lista\n2 - Add a task\n3 - Mark a task as completed\n4 - Quit\n\n-> ";
+			std::cout << std::endl << "Options \n";
+			std::cout << "1 - Display the list\n2 - Add a task\n3 - Mark a task as completed\n4 - Quit\n\n-> ";
 			std::cin >> alege;
 
 			if (alege == 1)
