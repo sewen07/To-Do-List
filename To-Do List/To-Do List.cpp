@@ -19,16 +19,16 @@ void display_tasks() {
 void add_task() {
 	std::ofstream File;
 	std::ifstream ReadFile;
-	std::string scris, listfile = "list.txt";
+	std::string write, listfile = "list.txt";
 	ReadFile.open(listfile);
 	File.open(listfile, std::ios::app);
 	std::cout << "Enter the task -> ";
 	std::cin.ignore();
-	std::getline(std::cin, scris);
-	std::cout << std::endl << "Task entered: " << scris << std::endl;
+	std::getline(std::cin, write);
+	std::cout << std::endl << "Task entered: " << write << std::endl;
 	if (ReadFile.is_open())
 	{
-		File << scris << std::endl;
+		File << write << std::endl;
 	}
 	File.close();
 	ReadFile.close();
@@ -86,8 +86,7 @@ int main()
 	std::ofstream File;
 	std::ifstream ReadFile;
 	system("color D");
-	int alege = 1;
-	std::string scris, delete_line, line, listfile = "list.txt", tempfile = "temp.txt", text, text_for_delete;
+	int choice = 1;
 
 	std::cout << R"(
 		
@@ -100,46 +99,46 @@ ___________              ________           .____    .__          __
 
 		)" << '\n';
 
-	while (alege == 1 || alege == 2 || alege == 3) {
+	while (choice == 1 || choice == 2 || choice == 3) {
 		std::cout << std::endl << "Options \n";
 		std::cout << "1 - Display the list\n2 - Add a task\n3 - Mark a task as completed\n4 - Quit\n\n-> ";
-		std::cin >> alege;
+		std::cin >> choice;
 
-		if (alege == 1)
+		if (choice == 1)
 		{
 			display_tasks();
 		}
 
-		if (alege == 2)
+		if (choice == 2)
 		{
 			add_task();
 		}
 
-		if (alege == 3)
+		if (choice == 3)
 		{
 			delete_task();
 		}
 	}
 
-	if (alege != 4) {
+	if (choice != 4) {
 		std::cout << "You've chosen an invalid option. Please choose from the following options:" << std::endl;
-		alege = 1;
-		while (alege == 1 || alege == 2 || alege == 3) {
+		choice = 1;
+		while (choice == 1 || choice == 2 || choice == 3) {
 			std::cout << std::endl << "Options \n";
 			std::cout << "1 - Display the list\n2 - Add a task\n3 - Mark a task as completed\n4 - Quit\n\n-> ";
-			std::cin >> alege;
+			std::cin >> choice;
 
-			if (alege == 1)
+			if (choice == 1)
 			{
 				display_tasks();
 			}
 
-			if (alege == 2)
+			if (choice == 2)
 			{
 				add_task();
 			}
 
-			if (alege == 3)
+			if (choice == 3)
 			{
 				delete_task();
 			}
