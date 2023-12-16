@@ -104,21 +104,16 @@ ___________              ________           .____    .__          __
 		std::cout << "1 - Display the list\n2 - Add a task\n3 - Mark a task as completed\n4 - Quit\n\n-> ";
 		std::cin >> choice;
 
-		if (choice == 1)
+		switch (choice) 
 		{
-			display_tasks();
+			
+		case 1: display_tasks();
+			
+		case 2: add_task();
+		
+		case 3: delete_task();
+		
 		}
-
-		if (choice == 2)
-		{
-			add_task();
-		}
-
-		if (choice == 3)
-		{
-			delete_task();
-		}
-	}
 
 	if (choice != 4) {
 		std::cout << "You've chosen an invalid option. Please choose from the following options:" << std::endl;
@@ -128,19 +123,15 @@ ___________              ________           .____    .__          __
 			std::cout << "1 - Display the list\n2 - Add a task\n3 - Mark a task as completed\n4 - Quit\n\n-> ";
 			std::cin >> choice;
 
-			if (choice == 1)
+			switch (choice)
 			{
-				display_tasks();
-			}
+			case 1: display_tasks();
 
-			if (choice == 2)
-			{
-				add_task();
-			}
+			case 2: add_task();
+	
+			case 3: delete_task();
 
-			if (choice == 3)
-			{
-				delete_task();
+			default: std::cout << "You've chosen an invalid question.";
 			}
 		}
 
