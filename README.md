@@ -14,7 +14,3 @@ You can:
 For this project I used MIT License.
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
-
-## Authors
-
-- [@Antonio-Balea](https://www.github.com/antonio-balea)
